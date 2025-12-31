@@ -3,10 +3,12 @@
 plugins {
     `java-library`
     `maven-publish`
+
+    id("pl.allegro.tech.build.axion-release") version "1.21.1"
 }
 
 group = "com.github.gabrielemercolino"
-version = "0.0.1"
+version = scmVersion.version
 
 repositories {
     mavenCentral()
