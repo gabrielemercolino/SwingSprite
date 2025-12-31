@@ -3,6 +3,7 @@
 ## Usage
 
 With gradle:
+
 ```kotlin
 repositories {
     mavenCentral()
@@ -13,6 +14,6 @@ dependencies {
     // from the main branch
     implementation("com.github.gabrielemercolino:SwingSprite:main-SNAPSHOT")
     // from a specific tag
-    implementation("com.github.gabrielemercolino:SwingSprite:v0.0.1")
+    implementation("com.github.gabrielemercolino:SwingSprite:v0.5.0")
 }
 ```
