@@ -3,11 +3,8 @@ package com.github.gabrielemercolino.swingsprite;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 import java.awt.Color;
-import java.io.IOException;
-import java.net.URL;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -43,12 +40,11 @@ class SpriteRendererTest {
 	}
 
 	@Test
-	void drawSprite() throws IOException {
+	void drawSprite() {
 		JFrame frame = createTestFrame(testName());
 
-		URL resource = getClass().getClassLoader().getResource("boy_down_1.png");
-		assertNotNull(resource);
-		Sprite sprite = new Sprite(ImageIO.read(resource));
+		Sprite sprite = Sprite.fromResource("boy_down_1.png");
+		assertNotNull(sprite);
 
 		renderer.clear(Color.DARK_GRAY);
 		renderer.drawSprite(sprite, 50, 50);
