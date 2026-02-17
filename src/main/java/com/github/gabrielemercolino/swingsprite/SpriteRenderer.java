@@ -13,7 +13,7 @@ public final class SpriteRenderer {
 	private final Stack<Font> fonts;
 
 	public SpriteRenderer(final int width, final int height) {
-		buffer = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+		buffer = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
 		g2d = buffer.createGraphics();
 		panel = new SpritePanel(buffer);
 		colors = new Stack<>();
