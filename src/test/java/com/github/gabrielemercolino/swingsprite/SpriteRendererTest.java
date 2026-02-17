@@ -46,9 +46,17 @@ class SpriteRendererTest {
         var maybeSprite = Sprite.fromResource("boy_down_1.png");
         assertTrue(maybeSprite.isPresent());
         var sprite = maybeSprite.get();
+        var flippedH = sprite.flipHorizontal();
+        var flippedV = sprite.flipVertical();
+        var rotated = sprite.rotate(Math.PI);
+        var scaled = sprite.scale(2);
 
         renderer.clear(Color.DARK_GRAY);
         renderer.drawSprite(sprite, 50, 50);
+        renderer.drawSprite(flippedH, 100, 50);
+        renderer.drawSprite(flippedV, 150, 50);
+        renderer.drawSprite(rotated, 50, 100);
+        renderer.drawSprite(scaled, 100, 100);
         renderer.render();
 
         while (frame.isVisible()) Thread.onSpinWait();
