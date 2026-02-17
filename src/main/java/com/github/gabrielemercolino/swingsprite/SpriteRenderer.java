@@ -32,7 +32,6 @@ public final class SpriteRenderer {
 		return panel;
 	}
 
-	
 	public void clear(final Color color) {
 		g2d.setColor(color);
 		g2d.fillRect(0, 0, buffer.getWidth(), buffer.getHeight());
@@ -82,7 +81,7 @@ public final class SpriteRenderer {
 	public static final class SpritePanel extends JPanel {
 		private final BufferedImage buffer;
 
-		public SpritePanel(BufferedImage buffer) {
+		private SpritePanel(BufferedImage buffer) {
 			this.buffer = buffer;
 			setPreferredSize(new Dimension(buffer.getWidth(), buffer.getHeight()));
 			setBackground(Color.BLACK);
